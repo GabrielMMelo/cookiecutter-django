@@ -90,7 +90,7 @@ def remove_packagejson_file():
 
 
 def remove_celery_app():
-    shutil.rmtree(os.path.join("{{ cookiecutter.project_slug }}", "taskapp"))
+    shutil.rmtree(os.path.join("taskapp"))
 
 
 def remove_dottravisyml_file():
@@ -255,8 +255,8 @@ def set_flags_in_envs(
 
 
 def set_flags_in_settings_files():
-    set_django_secret_key(os.path.join("config", "settings", "local.py"))
-    set_django_secret_key(os.path.join("config", "settings", "test.py"))
+    set_django_secret_key(os.path.join("{{ cookiecutter.project_slug }}","config", "settings", "local.py"))
+    set_django_secret_key(os.path.join("{{ cookiecutter.project_slug }}","config", "settings", "test.py"))
 
 
 def remove_envs_and_associated_files():
