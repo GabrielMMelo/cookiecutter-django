@@ -3,7 +3,7 @@ from django.apps import AppConfig
 
 class CoreAppConfig(AppConfig):
 
-    name = "{{ cookiecutter.project_slug }}.core"
+    name = "core"
     verbose_name = "Core"
 
     def ready(self):
