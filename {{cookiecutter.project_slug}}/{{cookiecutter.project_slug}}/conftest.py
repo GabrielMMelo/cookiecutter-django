@@ -2,7 +2,8 @@ import pytest
 from django.conf import settings
 from django.test import RequestFactory
 
-from {{ cookiecutter.project_slug }}.users.tests.factories import UserFactory
+# Your factory tests here!
+# from {{ cookiecutter.project_slug }}.users.tests.factories import UserFactory
 
 
 @pytest.fixture(autouse=True)
