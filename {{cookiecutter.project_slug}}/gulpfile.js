@@ -32,11 +32,11 @@ var pathsConfig = function (appName) {
 
   return {
     {% if cookiecutter.custom_bootstrap_compilation == 'y' %}
-    bootstrapSass: vendorsRoot + '/bootstrap/scss',
+    bootstrapSass: vendorsRoot + '/bootstrap-material-design/scss',
     vendorsJs: [
       vendorsRoot + 'jquery/dist/jquery.slim.js',
       vendorsRoot + 'popper.js/dist/umd/popper.js',
-      vendorsRoot + 'bootstrap/dist/js/bootstrap.js'
+      vendorsRoot + 'bootstrap-material-design/dist/js/bootstrap.js'
     ],
     {% endif %}
     app: this.app,
