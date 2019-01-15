@@ -9,6 +9,6 @@ from django.shortcuts import (
 )
 
 @login_required
-def Home(request):
+def home(request):
    return render(request, 'core/home.html', context={}) 
 
