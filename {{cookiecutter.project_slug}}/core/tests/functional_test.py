@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from iot_server.config.settings.base import ROOT_DIR, env
+from {{ cookiecutter.project_slug }}.config.settings.base import ROOT_DIR, env
 
 class FunctionalTest(unittest.TestCase):
     def setUp(self):

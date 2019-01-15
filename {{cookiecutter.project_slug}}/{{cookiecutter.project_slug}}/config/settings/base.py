@@ -5,7 +5,7 @@ Base settings to build other settings files upon.
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 4  # ({{ cookiecutter.project_slug }}/config/settings/base.py - 4 = {{ cookiecutter.project_slug }}/)
-APPS_DIR = ROOT_DIR.path('{{ cookiecutter.project_slug }}')
+APPS_DIR = ROOT_DIR
 
 env = environ.Env()
 
