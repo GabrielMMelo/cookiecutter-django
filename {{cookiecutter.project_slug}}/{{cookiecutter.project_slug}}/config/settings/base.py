@@ -73,6 +73,12 @@ THIRD_PARTY_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rest_framework',
+    {% if cookiecutter.use_zinnia == 'y' -%} 
+    'django_comments',
+    'mptt',
+    'tagging',
+    'zinnia',
+    {%- endif %}
 ]
 LOCAL_APPS = [
     'core.apps.CoreAppConfig',

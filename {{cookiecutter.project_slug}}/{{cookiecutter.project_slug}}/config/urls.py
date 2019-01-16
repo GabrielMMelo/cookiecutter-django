@@ -9,7 +9,11 @@ urlpatterns = [
     # Django Admin, use {% raw %}{% url 'admin:index' %}{% endraw %}
     path(settings.ADMIN_URL, admin.site.urls),
     path("accounts/", include("allauth.urls")),
+    path('weblog/', include('zinnia.urls')),
+    path('comments/', include('django_comments.urls')),
+
     # Your stuff: custom urls includes go here
+
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
 )
