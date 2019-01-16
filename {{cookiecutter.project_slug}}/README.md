@@ -1,6 +1,11 @@
-# Project Title
+# {{ cookiecutter.project_name }}
 
-One Paragraph of project description goes here
+{{ cookiecutter.description }}
+
+{% if cookiecutter.open_source_license != "Not open source" %}
+
+**License** {{cookiecutter.open_source_license}}
+{% endif %}
 
 ## Getting Started
 
