@@ -1,10 +1,10 @@
 {
   "project_name": "My Awesome Project",
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
-  "description": "Behold My Awesome Project!",
+  "description": "No description yet!",
   "author_name": "Gabriel M. de Melo",
   "domain_name": "example.com",
-  "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
+  "email": "gabrielmelocomp@gmail.com",
   "version": "0.1.0",
   "open_source_license": [
     "MIT",
@@ -29,8 +29,8 @@
     "9.3"
   ],
   "js_task_runner": [
-    "None",
-    "Gulp"
+    "Gulp",
+    "None"
   ],
   "custom_bootstrap_compilation": "y",
   "use_compressor": "y",
