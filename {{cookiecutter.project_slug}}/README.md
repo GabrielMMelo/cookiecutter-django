@@ -29,13 +29,19 @@ cookiecutter https://github.com/GabrielMMelo/cookiecutter-django
 
 3- Configure your database credentials in .env 
 
-4- Install javascript dependences (I'd rather to use `yarn` instead `npm`)
+4- Install project dependencies (with `pip`)
+
+```
+pip install -r requirements/local.txt
+```
+
+5- Install javascript dependences (I'd rather to use `yarn` instead `npm`)
 
 ```
 yarn install 
 ```
 
-5- Run the server
+6- Run the server
 
 ```
 yarn run dev
