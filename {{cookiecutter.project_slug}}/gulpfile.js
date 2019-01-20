@@ -1,4 +1,3 @@
-
 ////////////////////////////////
 		//Setup//
 ////////////////////////////////
@@ -34,7 +33,7 @@ var pathsConfig = function (appName) {
     {% if cookiecutter.custom_bootstrap_compilation == 'y' %}
     bootstrapSass: vendorsRoot + '/bootstrap-material-design/scss',
     vendorsJs: [
-      vendorsRoot + 'jquery/dist/jquery.slim.js',
+      vendorsRoot + 'jquery/dist/jquery.js',
       vendorsRoot + 'popper.js/dist/umd/popper.js',
       vendorsRoot + 'bootstrap-material-design/dist/js/bootstrap.js'
     ],
@@ -89,7 +88,7 @@ gulp.task('scripts', function() {
 // Vendor Javascript minification
 gulp.task('vendor-scripts', function() {
   return gulp.src(paths.vendorsJs)
-    .pipe(concat('vendors.js'))
+//    .pipe(concat('vendors.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(plumber()) // Checks for errors
     .pipe(uglify()) // Minifies the js
