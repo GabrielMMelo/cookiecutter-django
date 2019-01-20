@@ -35,7 +35,7 @@ var pathsConfig = function (appName) {
     vendorsJs: [
       vendorsRoot + 'jquery/dist/jquery.js',
       vendorsRoot + 'popper.js/dist/umd/popper.js',
-      vendorsRoot + 'bootstrap-material-design/dist/js/bootstrap.js'
+      vendorsRoot + 'bootstrap-material-design/js/bootstrapMaterialDesign.js'
     ],
     {% endif %}
     app: this.app,
