@@ -1,3 +1,4 @@
+{% raw %}
 {% extends "zinnia/skeleton.html" %}
 {% load i18n %}
 {% load static %}
@@ -34,7 +35,7 @@
     </p>
 </aside>
 <aside id="widget-recents" class="widget">
-    <h3> {% trans Últimas postagens %}</h3>
+    <h3> {% trans "Últimas postagens" %}</h3>
     {% get_recent_entries %}
 </aside>
 <aside id="widget-categories" class="widget">
@@ -88,3 +89,4 @@
 </aside>
 {% endif %}
 {% endblock sidebar %}
+{% endraw %}
