@@ -92,7 +92,9 @@
             {% endraw %}{% if cookiecutter.custom_bootstrap_compilation == "y" and cookiecutter.js_task_runner == "Gulp" %}{% raw %}
             <!-- Vendor dependencies bundled as one file-->
             {% endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% compress js %}{% endraw %}{% endif %}{% raw %}
-            <script src="{% static 'js/vendors.js' %}"></script>
+            <script src="{% static 'js/jquery.js' %}"></script>
+            <script src="{% static 'js/popper.js' %}"></script>
+            <script src="{% static 'js/bootstrap-material-design.js' %}"></script>
             {% endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% endcompress %}{% endraw %}{% endif %}{% raw %}
             {% endraw %}{% else %}{% raw %}
             <!-- Required by Bootstrap v4.1.1 -->
@@ -100,10 +102,13 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
+            <!-- session-security stuff -->
+            {% endraw %}{% endif %}{% if cookiecutter.use_session_security == "y" %}{% raw %}
             {% include 'session_security/all.html' %}
+            {% endraw %}{% endif %}{% raw %}
 
             <!-- Your stuff: Third-party javascript libraries go here -->
-            {% endraw %}{% endif %}{% raw %}
+
 
             <!-- place project specific Javascript in this file -->
             {% endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% compress js %}{% endraw %}{% endif %}{% raw %}
