@@ -65,7 +65,7 @@ Run `pytest`
 
 ## Authors
 
-* **{{ cookiecutter.author }}** - *Initial work*
+* **{{ cookiecutter.author_name }}** - *Initial work*
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
