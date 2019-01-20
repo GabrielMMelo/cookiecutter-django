@@ -41,6 +41,7 @@
   "use_heroku": "n",
   "use_travisci": "n",
   "use_zinnia": "y",
+  "use_session_security": "y",
   "keep_local_envs_in_vcs": "n",
 
   "debug": "n"
