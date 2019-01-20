@@ -146,6 +146,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    {% if cookiecutter.use_session_security == 'y' -%}
+    'session_security.middleware.SessionSecurityMiddleware',
+    {%- endif %}
 ]
 
 # STATIC
@@ -289,5 +292,18 @@ INSTALLED_APPS += ['compressor']
 STATICFILES_FINDERS += ['compressor.finders.CompressorFinder']
 
 {%- endif %}
+
+
+{% if cookiecutter.use_session_security == 'y' -%}
+# django-session-security
+# ------------------------------------------------------------------------------
+# https://django-session-security.readthedocs.io/en/latest/quick.html 
+INSTALLED_APPS += ['session_security']
+SESSION_SECURITY_WARN_AFTER = 60 * 29
+SESSION_SECURITY_EXPIRE_AFTER = 60 * 30
+SESSION_SECURITY_INSECURE = True
+
+{%- endif %}
+
 # Your stuff...
 # ------------------------------------------------------------------------------

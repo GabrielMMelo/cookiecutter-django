@@ -11,6 +11,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('weblog/', include('zinnia.urls')),
     path('comments/', include('django_comments.urls')),
+    path('session_security/', include('session_security.urls')),
 
     # Your stuff: custom urls includes go here
 
