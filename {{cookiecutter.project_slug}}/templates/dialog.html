@@ -1,0 +1,19 @@
+{% load i18n %}
+{% load static %}
+
+<div id="session_security_warning" class="session_security" style="display:none" aria-hidden="true" role="dialog">
+    <div class="session_security_overlay"></div>
+    <div class="session_security_modal" role="document" tabindex="-1">
+        <div class="row">
+            <div class="col-4">
+                <div class="ml-3">
+                    <img src="{% static '/img/logo.svg' %}">    
+                </div>
+            </div>
+            <div class="col-8 mt-3">
+                <h3>Sua sessão está prestes a expirar!</h3>
+                <p>Movimente o cursor ou pressione algum botão para extender seu tempo de sessão</p>
+            </div> 
+        </div>
+    </div>
+</div>
