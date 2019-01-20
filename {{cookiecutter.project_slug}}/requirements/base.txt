@@ -18,6 +18,9 @@ flower==0.9.2  # https://github.com/mher/flower
 {%- if cookiecutter.use_zinnia == "y" %}
 django-blog-zinnia==0.20
 {%- endif %}
+{%- if cookiecutter.use_session_security == "y" %}
+django-session-security==2.6.5
+{%- endif %}
 
 # Django
 # ------------------------------------------------------------------------------
