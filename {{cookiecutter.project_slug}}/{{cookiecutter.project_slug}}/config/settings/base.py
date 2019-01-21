@@ -73,12 +73,6 @@ THIRD_PARTY_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rest_framework',
-    {% if cookiecutter.use_zinnia == 'y' -%} 
-    'django_comments',
-    'mptt',
-    'tagging',
-    'zinnia',
-    {%- endif %}
 ]
 LOCAL_APPS = [
     'core.apps.CoreAppConfig',
@@ -296,7 +290,6 @@ STATICFILES_FINDERS += ['compressor.finders.CompressorFinder']
 
 {%- endif %}
 
-
 {% if cookiecutter.use_session_security == 'y' -%}
 # django-session-security
 # ------------------------------------------------------------------------------
@@ -305,6 +298,14 @@ INSTALLED_APPS += ['session_security']
 SESSION_SECURITY_WARN_AFTER = 60 * 29
 SESSION_SECURITY_EXPIRE_AFTER = 60 * 30
 SESSION_SECURITY_INSECURE = True
+
+{%- endif %}
+
+{% if cookiecutter.use_zinnia == 'y' -%} 
+# django-blog-zinnia
+# ------------------------------------------------------------------------------
+# http://docs.django-blog-zinnia.com/en/develop/index.html
+INSTALLED_APPS += ['django_comments', 'mptt', 'tagging', 'zinnia',]
 
 {%- endif %}
 
