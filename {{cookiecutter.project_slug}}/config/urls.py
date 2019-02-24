@@ -9,9 +9,13 @@ urlpatterns = [
     # Django Admin, use {% raw %}{% url 'admin:index' %}{% endraw %}
     path(settings.ADMIN_URL, admin.site.urls),
     path("accounts/", include("allauth.urls")),
+    {% if cookiecutter.use_zinnia == 'y' -%}
     path('weblog/', include('zinnia.urls')),
     path('comments/', include('django_comments.urls')),
+    {% endif %}
+    {% if cookiecutter.use_security_session == 'y' -%}
     path('session_security/', include('session_security.urls')),
+    {% endif %}
 
     # Your stuff: custom urls includes go here
 
