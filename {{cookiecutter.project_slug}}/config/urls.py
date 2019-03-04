@@ -13,7 +13,7 @@ urlpatterns = [
     path('weblog/', include('zinnia.urls')),
     path('comments/', include('django_comments.urls')),
     {% endif %}
-    {% if cookiecutter.use_security_session == 'y' -%}
+    {% if cookiecutter.use_session_security == 'y' -%}
     path('session_security/', include('session_security.urls')),
     {% endif %}
 
