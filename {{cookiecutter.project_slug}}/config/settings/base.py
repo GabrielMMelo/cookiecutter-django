@@ -198,7 +198,7 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
-                {%- if cookiecutter.use_session_security == "y" %}
+                {%- if cookiecutter.use_zinnia == "y" %}
                 'zinnia.context_processors.version',
                 {%- endif %}
             ],
@@ -293,7 +293,7 @@ STATICFILES_FINDERS += ['compressor.finders.CompressorFinder']
 {% if cookiecutter.use_session_security == 'y' -%}
 # django-session-security
 # ------------------------------------------------------------------------------
-# https://django-session-security.readthedocs.io/en/latest/quick.html 
+# https://django-session-security.readthedocs.io/en/latest/quick.html
 INSTALLED_APPS += ['session_security']
 SESSION_SECURITY_WARN_AFTER = 60 * 29
 SESSION_SECURITY_EXPIRE_AFTER = 60 * 30
@@ -301,7 +301,7 @@ SESSION_SECURITY_INSECURE = True
 
 {%- endif %}
 
-{% if cookiecutter.use_zinnia == 'y' -%} 
+{% if cookiecutter.use_zinnia == 'y' -%}
 # django-blog-zinnia
 # ------------------------------------------------------------------------------
 # http://docs.django-blog-zinnia.com/en/develop/index.html
