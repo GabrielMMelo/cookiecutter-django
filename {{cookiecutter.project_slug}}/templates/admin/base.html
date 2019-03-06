@@ -94,11 +94,11 @@
         {%- if cookiecutter.use_session_security == "y" %}
         {% raw %}
 
-        {% compress js %}
+        {% if cookiecutter.use_compressor == "y" %}{% compress js %}{% endif %}
         <script src="{% static 'js/jquery.js' %}"></script>
         <script src="{% static 'js/popper.js' %}"></script>
         <script src="{% static 'js/bootstrapMaterialDesign.js' %}"></script>
-        {% endcompress %}
+        {% if cookiecutter.use_compressor == "y" %}{% endcompress %}{% endif %}
         {% include 'session_security/all.html' %}
 
         {% endraw %}
